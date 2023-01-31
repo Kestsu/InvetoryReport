@@ -1,2 +1,6 @@
 class SimpleReport:
-    pass
+
+    def generate(list: list):
+        return list
+
+

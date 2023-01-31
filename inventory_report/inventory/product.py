@@ -25,3 +25,15 @@ class Product:
             f" até {self.data_de_validade}"
             f" precisa ser armazenado {self.instrucoes_de_armazenamento}."
         )
+
+product_instance = Product(  
+    1,
+    "CADEIRA",
+    "Forces of Nature",
+    "2022-04-04",
+    "2023-02-09",
+    "FR48",
+    "Conservar em local fresco",
+)
+
+print(product_instance)
