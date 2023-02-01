@@ -1,4 +1,3 @@
-# from functools import lru_cache
 from abc import ABC
 import csv
 import json
@@ -40,9 +39,3 @@ class Inventory(ABC):
             if type_report == "simples":
                 return SimpleReport.generate(data)
             return CompleteReport.generate(data)
-
-
-# testes = Inventory.import_data("inventory_report/data/inventory.csv", "simples")
-# testes = Inventory.import_data("inventory_report/data/inventory.json", "simples")
-# testes = Inventory.import_data("inventory_report/data/inventory.xml", "simples")
-# print(testes)
