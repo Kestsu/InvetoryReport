@@ -1,24 +1,25 @@
 from abc import ABC, abstractmethod
-from datetime import datetime, date
+from datetime import date
+
 
 class SimpleReport(ABC):
 
     @abstractmethod
     def generate(list: list[dict]):
         today_date = str(date.today())
-        
+
         lista_date_fab = [
             item["data_de_fabricacao"]
             for item in list
         ]
 
-        data_mais_antiga = min(lista_date_fab) 
+        data_mais_antiga = min(lista_date_fab)
 
         lista_date_val = [
             item["data_de_validade"]
             for item in list
         ]
-        
+
         mais_perto = []
 
         for data in lista_date_val:
@@ -26,7 +27,7 @@ class SimpleReport(ABC):
                 mais_perto.append(data)
 
         data_validade_perto = min(mais_perto)
-        
+
         lista_de_empresa = [
             item["nome_da_empresa"]
             for item in list
@@ -36,7 +37,6 @@ class SimpleReport(ABC):
         for item in lista_de_empresa:
             contagem[item] = contagem.get(item, 0) + 1
 
-        # print(contagem)
         empresa_mais_repetida = max(contagem, key=contagem.get)
 
         return f"""Data de fabricação mais antiga: {data_mais_antiga}
@@ -74,4 +74,3 @@ Empresa com mais produtos: {empresa_mais_repetida}"""
 #    ])
 
 # print(testss)
-
