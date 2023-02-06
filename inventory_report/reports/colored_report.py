@@ -1,4 +1,5 @@
 import re
+# from simple_report import SimpleReport
 
 
 class ColoredReport:
@@ -41,3 +42,37 @@ class ColoredReport:
             )
 
         return report
+
+
+# lista = [
+#         {
+#             "id": 1,
+#             "nome_do_produto": "Cafe",
+#             "nome_da_empresa": "Cafes Nature",
+#             "data_de_fabricacao": "2020-07-04",
+#             "data_de_validade": "2023-02-09",
+#             "numero_de_serie": "FR48",
+#             "instrucoes_de_armazenamento": "instrucao"
+#         },
+#         {
+#             "id": 2,
+#             "nome_do_produto": "Cafe",
+#             "nome_da_empresa": "Cafes",
+#             "data_de_fabricacao": "2020-07-04",
+#             "data_de_validade": "2023-02-09",
+#             "numero_de_serie": "FR48",
+#             "instrucoes_de_armazenamento": "instrucao"
+#         },
+#         {
+#             "id": 3,
+#             "nome_do_produto": "Cafe",
+#             "nome_da_empresa": "Cafe com leite",
+#             "data_de_fabricacao": "2020-07-04",
+#             "data_de_validade": "2023-02-09",
+#             "numero_de_serie": "FR48",
+#             "instrucoes_de_armazenamento": "instrucao"
+#         }
+#     ]
+
+# color_report_instance = ColoredReport(SimpleReport).generate(lista)
+# print(color_report_instance)
